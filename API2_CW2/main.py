@@ -7,7 +7,7 @@ from scale import get_spn
 STATIC_API = "https://static-maps.yandex.ru/1.x/"
 
 def main():
-    address = input("Введите адрес: $-> ")
+    address = " ".join(sys.argv[1:])
 
     toponym = geocode(address)
     if not toponym:
@@ -38,3 +38,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
