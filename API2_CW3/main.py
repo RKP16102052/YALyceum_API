@@ -8,7 +8,7 @@ from scale import get_spn_for_two_points
 STATIC_API = "https://static-maps.yandex.ru/1.x/"
 
 def main():
-    address = input("Введите адрес: $-> ")
+    address = " ".join(sys.argv[1:])
 
     point = geocode(address)
     if not point:
@@ -52,3 +52,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
